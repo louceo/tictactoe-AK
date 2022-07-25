@@ -46,25 +46,25 @@ def store_o_in_grid(o_loc, grid):
 # FUNCTION TO CHECK FOR GAMEOVER
 def check_win(grid):
     #check diag manual
-    if grid[0][0] == 'x' and grid[1][1] == 'x' and grid[2][2] == 'x':
+    if grid[0][0] == grid[1][1] == grid[2][2] != '-':
         return True
-    elif grid[0][0] == 'o' and grid[1][1] == 'o' and grid[2][2] == 'o':
+    elif grid[0][0] == grid[1][1] == grid[2][2] != '-':
         return True
-    elif grid[0][2] == 'x' and grid[1][1] == 'x' and grid[2][0] == 'x':
+    elif grid[0][2] == grid[1][1] == grid[2][0] != '-':
         return True
-    elif grid[0][2] == 'o' and grid[1][1] == 'o' and grid[2][0] == 'o':
+    elif grid[0][2] == grid[1][1] == grid[2][0] != '-':
         return True
     for i in range(len(grid)): 
         # row check 
-        if grid[i][0] == 'x' and grid[i][1] == 'x' and grid[i][2] == 'x':
+        if grid[i][0] == grid[i][1] == grid[i][2] != '-':
             return True
-        elif grid[i][0] == 'o' and grid[i][1] == 'o' and grid[i][2] == 'o':
+        elif grid[i][0] == grid[i][1] == grid[i][2] != '-':
             return True
         for j in range(len(grid[i])):
              # col check
-            if grid[0][j] == 'x' and grid[1][j] == 'x' and grid[2][j] == 'x':
+            if grid[0][j] == grid[1][j] == grid[2][j] != '-':
                 return True
-            elif grid[0][j] == 'o' and grid[1][j] == 'o' and grid[2][j] == 'o':
+            elif grid[0][j] == grid[1][j] == grid[2][j] != '-':
                 return True
     
 # FUNCTION TO PRINT UI
